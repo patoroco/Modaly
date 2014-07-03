@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B97229FA1965BD2D00201B18 /* JMGModaly.m in Sources */ = {isa = PBXBuildFile; fileRef = B97229F91965BD2D00201B18 /* JMGModaly.m */; };
 		B98D80901965BBF5007A8820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D808F1965BBF5007A8820 /* Foundation.framework */; };
 		B98D80921965BBF5007A8820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80911965BBF5007A8820 /* CoreGraphics.framework */; };
 		B98D80941965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B97229F81965BD2D00201B18 /* JMGModaly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMGModaly.h; path = Modaly/JMGModaly.h; sourceTree = "<group>"; };
+		B97229F91965BD2D00201B18 /* JMGModaly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMGModaly.m; path = Modaly/JMGModaly.m; sourceTree = "<group>"; };
 		B98D808C1965BBF5007A8820 /* Modaly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modaly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98D808F1965BBF5007A8820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B98D80911965BBF5007A8820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,7 +87,8 @@
 		B98D80831965BBF5007A8820 = {
 			isa = PBXGroup;
 			children = (
-				B98D80951965BBF5007A8820 /* Modaly */,
+				B9DB26591965BFE900A507F0 /* Modaly */,
+				B98D80951965BBF5007A8820 /* Modaly Demo */,
 				B98D80B71965BBF5007A8820 /* ModalyTests */,
 				B98D808E1965BBF5007A8820 /* Frameworks */,
 				B98D808D1965BBF5007A8820 /* Products */,
@@ -111,7 +115,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B98D80951965BBF5007A8820 /* Modaly */ = {
+		B98D80951965BBF5007A8820 /* Modaly Demo */ = {
 			isa = PBXGroup;
 			children = (
 				B98D809E1965BBF5007A8820 /* JMGAppDelegate.h */,
@@ -123,7 +127,7 @@
 				B98D80AA1965BBF5007A8820 /* Images.xcassets */,
 				B98D80961965BBF5007A8820 /* Supporting Files */,
 			);
-			path = Modaly;
+			path = "Modaly Demo";
 			sourceTree = "<group>";
 		};
 		B98D80961965BBF5007A8820 /* Supporting Files */ = {
@@ -153,6 +157,15 @@
 				B98D80BA1965BBF5007A8820 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9DB26591965BFE900A507F0 /* Modaly */ = {
+			isa = PBXGroup;
+			children = (
+				B97229F81965BD2D00201B18 /* JMGModaly.h */,
+				B97229F91965BD2D00201B18 /* JMGModaly.m */,
+			);
+			name = Modaly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly" */;
+			buildConfigurationList = B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -256,6 +269,7 @@
 			files = (
 				B98D809C1965BBF5007A8820 /* main.m in Sources */,
 				B98D80A91965BBF5007A8820 /* JMGViewController.m in Sources */,
+				B97229FA1965BD2D00201B18 /* JMGModaly.m in Sources */,
 				B98D80A01965BBF5007A8820 /* JMGAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,9 +406,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
-				INFOPLIST_FILE = "Modaly/Modaly-Info.plist";
+				GCC_PREFIX_HEADER = "Modaly Demo/Modaly-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Modaly Demo/Modaly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,9 +420,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
-				INFOPLIST_FILE = "Modaly/Modaly-Info.plist";
+				GCC_PREFIX_HEADER = "Modaly Demo/Modaly-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Modaly Demo/Modaly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -455,7 +471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly" */ = {
+		B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B98D80BF1965BBF5007A8820 /* Debug */,
@@ -471,6 +487,7 @@
 				B98D80C31965BBF5007A8820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B98D80C41965BBF5007A8820 /* Build configuration list for PBXNativeTarget "ModalyTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +496,7 @@
 				B98D80C61965BBF5007A8820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
