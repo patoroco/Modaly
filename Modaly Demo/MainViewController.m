@@ -19,6 +19,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue isKindOfClass:[JMGModaly class]]) {
+        // It needs to retain segue because it's animation transition delegate
         self.modalSegue = (JMGModaly *)segue;
     }
 }

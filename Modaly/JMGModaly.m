@@ -11,7 +11,6 @@
 @interface JMGModaly () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
     @property (nonatomic) CGRect originalSize;
-    @property (nonatomic) CGAffineTransform afine;
     @property (nonatomic, strong) UIView *shadow;
     @property (nonatomic) BOOL modalPanelIsPresented;
 
@@ -28,7 +27,6 @@
     }
     
     self.originalSize = destination.view.frame;
-    self.afine = destination.view.transform;
     
     return self;
 }
@@ -49,7 +47,11 @@
     [vcs presentViewController:vcd animated:YES completion:nil];
     
     vcd.view.frame = self.originalSize;
-    vcd.view.bounds = CGRectMake(0, 0, vcd.view.bounds.size.height, vcd.view.bounds.size.width);
+    
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        // Invert bounds when iDevice is on portrait
+        vcd.view.bounds = CGRectMake(0, 0, vcd.view.bounds.size.height, vcd.view.bounds.size.width);
+    }
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
