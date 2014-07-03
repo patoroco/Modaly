@@ -14,7 +14,6 @@
 		B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80981965BBF5007A8820 /* InfoPlist.strings */; };
 		B98D809C1965BBF5007A8820 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809B1965BBF5007A8820 /* main.m */; };
 		B98D80A01965BBF5007A8820 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809F1965BBF5007A8820 /* AppDelegate.m */; };
-		B98D80A31965BBF5007A8820 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */; };
 		B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */; };
 		B98D80A91965BBF5007A8820 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80A81965BBF5007A8820 /* MainViewController.m */; };
 		B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98D80AA1965BBF5007A8820 /* Images.xcassets */; };
@@ -49,7 +48,6 @@
 		B98D809D1965BBF5007A8820 /* Modaly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Modaly-Prefix.pch"; sourceTree = "<group>"; };
 		B98D809E1965BBF5007A8820 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B98D809F1965BBF5007A8820 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B98D80A21965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B98D80A51965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		B98D80A71965BBF5007A8820 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B98D80A81965BBF5007A8820 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				B9DB265A1965C14500A507F0 /* SecondViewController.h */,
 				B9DB265B1965C14500A507F0 /* SecondViewController.m */,
 				B98D80AA1965BBF5007A8820 /* Images.xcassets */,
-				B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */,
 				B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */,
 				B98D80961965BBF5007A8820 /* Supporting Files */,
 			);
@@ -252,7 +249,6 @@
 			files = (
 				B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */,
 				B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */,
-				B98D80A31965BBF5007A8820 /* Main_iPhone.storyboard in Resources */,
 				B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +301,6 @@
 				B98D80991965BBF5007A8820 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B98D80A21965BBF5007A8820 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */ = {
@@ -415,7 +403,7 @@
 				GCC_PREFIX_HEADER = "Modaly Demo/Modaly-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Modaly Demo/Modaly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,7 +417,7 @@
 				GCC_PREFIX_HEADER = "Modaly Demo/Modaly-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Modaly Demo/Modaly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
