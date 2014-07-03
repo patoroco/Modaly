@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B98D80901965BBF5007A8820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D808F1965BBF5007A8820 /* Foundation.framework */; };
+		B98D80921965BBF5007A8820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80911965BBF5007A8820 /* CoreGraphics.framework */; };
+		B98D80941965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
+		B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80981965BBF5007A8820 /* InfoPlist.strings */; };
+		B98D809C1965BBF5007A8820 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809B1965BBF5007A8820 /* main.m */; };
+		B98D80A01965BBF5007A8820 /* JMGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */; };
+		B98D80A31965BBF5007A8820 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */; };
+		B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */; };
+		B98D80A91965BBF5007A8820 /* JMGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80A81965BBF5007A8820 /* JMGViewController.m */; };
+		B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98D80AA1965BBF5007A8820 /* Images.xcassets */; };
+		B98D80B21965BBF5007A8820 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80B11965BBF5007A8820 /* XCTest.framework */; };
+		B98D80B31965BBF5007A8820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D808F1965BBF5007A8820 /* Foundation.framework */; };
+		B98D80B41965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
+		B98D80BC1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80BA1965BBF5007A8820 /* InfoPlist.strings */; };
+		B98D80BE1965BBF5007A8820 /* ModalyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80BD1965BBF5007A8820 /* ModalyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B98D80B51965BBF5007A8820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B98D80841965BBF5007A8820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B98D808B1965BBF5007A8820;
+			remoteInfo = Modaly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B98D808C1965BBF5007A8820 /* Modaly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modaly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98D808F1965BBF5007A8820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B98D80911965BBF5007A8820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B98D80931965BBF5007A8820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B98D80971965BBF5007A8820 /* Modaly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Modaly-Info.plist"; sourceTree = "<group>"; };
+		B98D80991965BBF5007A8820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B98D809B1965BBF5007A8820 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B98D809D1965BBF5007A8820 /* Modaly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Modaly-Prefix.pch"; sourceTree = "<group>"; };
+		B98D809E1965BBF5007A8820 /* JMGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMGAppDelegate.h; sourceTree = "<group>"; };
+		B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMGAppDelegate.m; sourceTree = "<group>"; };
+		B98D80A21965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		B98D80A51965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B98D80A71965BBF5007A8820 /* JMGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMGViewController.h; sourceTree = "<group>"; };
+		B98D80A81965BBF5007A8820 /* JMGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMGViewController.m; sourceTree = "<group>"; };
+		B98D80AA1965BBF5007A8820 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B98D80B01965BBF5007A8820 /* ModalyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98D80B11965BBF5007A8820 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B98D80B91965BBF5007A8820 /* ModalyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModalyTests-Info.plist"; sourceTree = "<group>"; };
+		B98D80BB1965BBF5007A8820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B98D80BD1965BBF5007A8820 /* ModalyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B98D80891965BBF5007A8820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D80921965BBF5007A8820 /* CoreGraphics.framework in Frameworks */,
+				B98D80941965BBF5007A8820 /* UIKit.framework in Frameworks */,
+				B98D80901965BBF5007A8820 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B98D80AD1965BBF5007A8820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D80B21965BBF5007A8820 /* XCTest.framework in Frameworks */,
+				B98D80B41965BBF5007A8820 /* UIKit.framework in Frameworks */,
+				B98D80B31965BBF5007A8820 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B98D80831965BBF5007A8820 = {
+			isa = PBXGroup;
+			children = (
+				B98D80951965BBF5007A8820 /* Modaly */,
+				B98D80B71965BBF5007A8820 /* ModalyTests */,
+				B98D808E1965BBF5007A8820 /* Frameworks */,
+				B98D808D1965BBF5007A8820 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B98D808D1965BBF5007A8820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B98D808C1965BBF5007A8820 /* Modaly.app */,
+				B98D80B01965BBF5007A8820 /* ModalyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B98D808E1965BBF5007A8820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B98D808F1965BBF5007A8820 /* Foundation.framework */,
+				B98D80911965BBF5007A8820 /* CoreGraphics.framework */,
+				B98D80931965BBF5007A8820 /* UIKit.framework */,
+				B98D80B11965BBF5007A8820 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B98D80951965BBF5007A8820 /* Modaly */ = {
+			isa = PBXGroup;
+			children = (
+				B98D809E1965BBF5007A8820 /* JMGAppDelegate.h */,
+				B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */,
+				B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */,
+				B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */,
+				B98D80A71965BBF5007A8820 /* JMGViewController.h */,
+				B98D80A81965BBF5007A8820 /* JMGViewController.m */,
+				B98D80AA1965BBF5007A8820 /* Images.xcassets */,
+				B98D80961965BBF5007A8820 /* Supporting Files */,
+			);
+			path = Modaly;
+			sourceTree = "<group>";
+		};
+		B98D80961965BBF5007A8820 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98D80971965BBF5007A8820 /* Modaly-Info.plist */,
+				B98D80981965BBF5007A8820 /* InfoPlist.strings */,
+				B98D809B1965BBF5007A8820 /* main.m */,
+				B98D809D1965BBF5007A8820 /* Modaly-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B98D80B71965BBF5007A8820 /* ModalyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B98D80BD1965BBF5007A8820 /* ModalyTests.m */,
+				B98D80B81965BBF5007A8820 /* Supporting Files */,
+			);
+			path = ModalyTests;
+			sourceTree = "<group>";
+		};
+		B98D80B81965BBF5007A8820 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98D80B91965BBF5007A8820 /* ModalyTests-Info.plist */,
+				B98D80BA1965BBF5007A8820 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B98D808B1965BBF5007A8820 /* Modaly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98D80C11965BBF5007A8820 /* Build configuration list for PBXNativeTarget "Modaly" */;
+			buildPhases = (
+				B98D80881965BBF5007A8820 /* Sources */,
+				B98D80891965BBF5007A8820 /* Frameworks */,
+				B98D808A1965BBF5007A8820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Modaly;
+			productName = Modaly;
+			productReference = B98D808C1965BBF5007A8820 /* Modaly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B98D80AF1965BBF5007A8820 /* ModalyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98D80C41965BBF5007A8820 /* Build configuration list for PBXNativeTarget "ModalyTests" */;
+			buildPhases = (
+				B98D80AC1965BBF5007A8820 /* Sources */,
+				B98D80AD1965BBF5007A8820 /* Frameworks */,
+				B98D80AE1965BBF5007A8820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B98D80B61965BBF5007A8820 /* PBXTargetDependency */,
+			);
+			name = ModalyTests;
+			productName = ModalyTests;
+			productReference = B98D80B01965BBF5007A8820 /* ModalyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B98D80841965BBF5007A8820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JMG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jorge Maroto García";
+				TargetAttributes = {
+					B98D80AF1965BBF5007A8820 = {
+						TestTargetID = B98D808B1965BBF5007A8820;
+					};
+				};
+			};
+			buildConfigurationList = B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B98D80831965BBF5007A8820;
+			productRefGroup = B98D808D1965BBF5007A8820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B98D808B1965BBF5007A8820 /* Modaly */,
+				B98D80AF1965BBF5007A8820 /* ModalyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B98D808A1965BBF5007A8820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */,
+				B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */,
+				B98D80A31965BBF5007A8820 /* Main_iPhone.storyboard in Resources */,
+				B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B98D80AE1965BBF5007A8820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D80BC1965BBF5007A8820 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B98D80881965BBF5007A8820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D809C1965BBF5007A8820 /* main.m in Sources */,
+				B98D80A91965BBF5007A8820 /* JMGViewController.m in Sources */,
+				B98D80A01965BBF5007A8820 /* JMGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B98D80AC1965BBF5007A8820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98D80BE1965BBF5007A8820 /* ModalyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B98D80B61965BBF5007A8820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B98D808B1965BBF5007A8820 /* Modaly */;
+			targetProxy = B98D80B51965BBF5007A8820 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B98D80981965BBF5007A8820 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98D80991965BBF5007A8820 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98D80A21965BBF5007A8820 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98D80A51965BBF5007A8820 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B98D80BA1965BBF5007A8820 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98D80BB1965BBF5007A8820 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B98D80BF1965BBF5007A8820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B98D80C01965BBF5007A8820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B98D80C21965BBF5007A8820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
+				INFOPLIST_FILE = "Modaly/Modaly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B98D80C31965BBF5007A8820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
+				INFOPLIST_FILE = "Modaly/Modaly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B98D80C51965BBF5007A8820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Modaly.app/Modaly";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ModalyTests/ModalyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B98D80C61965BBF5007A8820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Modaly.app/Modaly";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
+				INFOPLIST_FILE = "ModalyTests/ModalyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98D80BF1965BBF5007A8820 /* Debug */,
+				B98D80C01965BBF5007A8820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B98D80C11965BBF5007A8820 /* Build configuration list for PBXNativeTarget "Modaly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98D80C21965BBF5007A8820 /* Debug */,
+				B98D80C31965BBF5007A8820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B98D80C41965BBF5007A8820 /* Build configuration list for PBXNativeTarget "ModalyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98D80C51965BBF5007A8820 /* Debug */,
+				B98D80C61965BBF5007A8820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B98D80841965BBF5007A8820 /* Project object */;
+}
