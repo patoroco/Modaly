@@ -1,5 +1,5 @@
 //
-//  JMGViewController.h
+//  MainViewController.h
 //  Modaly
 //
 //  Created by Jorge Maroto García on 03/07/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMGViewController : UIViewController
+@interface MainViewController : UIViewController
 
 @end

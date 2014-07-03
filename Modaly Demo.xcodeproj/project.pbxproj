@@ -13,16 +13,17 @@
 		B98D80941965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
 		B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80981965BBF5007A8820 /* InfoPlist.strings */; };
 		B98D809C1965BBF5007A8820 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809B1965BBF5007A8820 /* main.m */; };
-		B98D80A01965BBF5007A8820 /* JMGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */; };
+		B98D80A01965BBF5007A8820 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D809F1965BBF5007A8820 /* AppDelegate.m */; };
 		B98D80A31965BBF5007A8820 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */; };
 		B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */; };
-		B98D80A91965BBF5007A8820 /* JMGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80A81965BBF5007A8820 /* JMGViewController.m */; };
+		B98D80A91965BBF5007A8820 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80A81965BBF5007A8820 /* MainViewController.m */; };
 		B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98D80AA1965BBF5007A8820 /* Images.xcassets */; };
 		B98D80B21965BBF5007A8820 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80B11965BBF5007A8820 /* XCTest.framework */; };
 		B98D80B31965BBF5007A8820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D808F1965BBF5007A8820 /* Foundation.framework */; };
 		B98D80B41965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
 		B98D80BC1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80BA1965BBF5007A8820 /* InfoPlist.strings */; };
 		B98D80BE1965BBF5007A8820 /* ModalyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80BD1965BBF5007A8820 /* ModalyTests.m */; };
+		B9DB265C1965C14500A507F0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DB265B1965C14500A507F0 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +47,20 @@
 		B98D80991965BBF5007A8820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B98D809B1965BBF5007A8820 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B98D809D1965BBF5007A8820 /* Modaly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Modaly-Prefix.pch"; sourceTree = "<group>"; };
-		B98D809E1965BBF5007A8820 /* JMGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMGAppDelegate.h; sourceTree = "<group>"; };
-		B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMGAppDelegate.m; sourceTree = "<group>"; };
+		B98D809E1965BBF5007A8820 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B98D809F1965BBF5007A8820 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B98D80A21965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B98D80A51965BBF5007A8820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		B98D80A71965BBF5007A8820 /* JMGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMGViewController.h; sourceTree = "<group>"; };
-		B98D80A81965BBF5007A8820 /* JMGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMGViewController.m; sourceTree = "<group>"; };
+		B98D80A71965BBF5007A8820 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B98D80A81965BBF5007A8820 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B98D80AA1965BBF5007A8820 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B98D80B01965BBF5007A8820 /* ModalyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98D80B11965BBF5007A8820 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B98D80B91965BBF5007A8820 /* ModalyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModalyTests-Info.plist"; sourceTree = "<group>"; };
 		B98D80BB1965BBF5007A8820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B98D80BD1965BBF5007A8820 /* ModalyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalyTests.m; sourceTree = "<group>"; };
+		B9DB265A1965C14500A507F0 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B9DB265B1965C14500A507F0 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,13 +121,15 @@
 		B98D80951965BBF5007A8820 /* Modaly Demo */ = {
 			isa = PBXGroup;
 			children = (
-				B98D809E1965BBF5007A8820 /* JMGAppDelegate.h */,
-				B98D809F1965BBF5007A8820 /* JMGAppDelegate.m */,
+				B98D809E1965BBF5007A8820 /* AppDelegate.h */,
+				B98D809F1965BBF5007A8820 /* AppDelegate.m */,
+				B98D80A71965BBF5007A8820 /* MainViewController.h */,
+				B98D80A81965BBF5007A8820 /* MainViewController.m */,
+				B9DB265A1965C14500A507F0 /* SecondViewController.h */,
+				B9DB265B1965C14500A507F0 /* SecondViewController.m */,
+				B98D80AA1965BBF5007A8820 /* Images.xcassets */,
 				B98D80A11965BBF5007A8820 /* Main_iPhone.storyboard */,
 				B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */,
-				B98D80A71965BBF5007A8820 /* JMGViewController.h */,
-				B98D80A81965BBF5007A8820 /* JMGViewController.m */,
-				B98D80AA1965BBF5007A8820 /* Images.xcassets */,
 				B98D80961965BBF5007A8820 /* Supporting Files */,
 			);
 			path = "Modaly Demo";
@@ -267,10 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DB265C1965C14500A507F0 /* SecondViewController.m in Sources */,
 				B98D809C1965BBF5007A8820 /* main.m in Sources */,
-				B98D80A91965BBF5007A8820 /* JMGViewController.m in Sources */,
+				B98D80A91965BBF5007A8820 /* MainViewController.m in Sources */,
 				B97229FA1965BD2D00201B18 /* JMGModaly.m in Sources */,
-				B98D80A01965BBF5007A8820 /* JMGAppDelegate.m in Sources */,
+				B98D80A01965BBF5007A8820 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

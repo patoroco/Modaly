@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Jorge Maroto García. All rights reserved.
 //
 
-#import "JMGAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation JMGAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
