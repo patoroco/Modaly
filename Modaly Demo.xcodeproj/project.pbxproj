@@ -17,23 +17,8 @@
 		B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98D80A41965BBF5007A8820 /* Main_iPad.storyboard */; };
 		B98D80A91965BBF5007A8820 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80A81965BBF5007A8820 /* MainViewController.m */; };
 		B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98D80AA1965BBF5007A8820 /* Images.xcassets */; };
-		B98D80B21965BBF5007A8820 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80B11965BBF5007A8820 /* XCTest.framework */; };
-		B98D80B31965BBF5007A8820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D808F1965BBF5007A8820 /* Foundation.framework */; };
-		B98D80B41965BBF5007A8820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98D80931965BBF5007A8820 /* UIKit.framework */; };
-		B98D80BC1965BBF5007A8820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98D80BA1965BBF5007A8820 /* InfoPlist.strings */; };
-		B98D80BE1965BBF5007A8820 /* ModalyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D80BD1965BBF5007A8820 /* ModalyTests.m */; };
 		B9DB265C1965C14500A507F0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DB265B1965C14500A507F0 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B98D80B51965BBF5007A8820 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B98D80841965BBF5007A8820 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B98D808B1965BBF5007A8820;
-			remoteInfo = Modaly;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B97229F81965BD2D00201B18 /* JMGModaly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMGModaly.h; path = Modaly/JMGModaly.h; sourceTree = "<group>"; };
@@ -52,11 +37,6 @@
 		B98D80A71965BBF5007A8820 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B98D80A81965BBF5007A8820 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B98D80AA1965BBF5007A8820 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B98D80B01965BBF5007A8820 /* ModalyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B98D80B11965BBF5007A8820 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B98D80B91965BBF5007A8820 /* ModalyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModalyTests-Info.plist"; sourceTree = "<group>"; };
-		B98D80BB1965BBF5007A8820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B98D80BD1965BBF5007A8820 /* ModalyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalyTests.m; sourceTree = "<group>"; };
 		B9DB265A1965C14500A507F0 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B9DB265B1965C14500A507F0 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,16 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B98D80AD1965BBF5007A8820 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B98D80B21965BBF5007A8820 /* XCTest.framework in Frameworks */,
-				B98D80B41965BBF5007A8820 /* UIKit.framework in Frameworks */,
-				B98D80B31965BBF5007A8820 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +60,6 @@
 			children = (
 				B9DB26591965BFE900A507F0 /* Modaly */,
 				B98D80951965BBF5007A8820 /* Modaly Demo */,
-				B98D80B71965BBF5007A8820 /* ModalyTests */,
 				B98D808E1965BBF5007A8820 /* Frameworks */,
 				B98D808D1965BBF5007A8820 /* Products */,
 			);
@@ -100,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				B98D808C1965BBF5007A8820 /* Modaly.app */,
-				B98D80B01965BBF5007A8820 /* ModalyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,7 +79,6 @@
 				B98D808F1965BBF5007A8820 /* Foundation.framework */,
 				B98D80911965BBF5007A8820 /* CoreGraphics.framework */,
 				B98D80931965BBF5007A8820 /* UIKit.framework */,
-				B98D80B11965BBF5007A8820 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,24 +106,6 @@
 				B98D80981965BBF5007A8820 /* InfoPlist.strings */,
 				B98D809B1965BBF5007A8820 /* main.m */,
 				B98D809D1965BBF5007A8820 /* Modaly-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B98D80B71965BBF5007A8820 /* ModalyTests */ = {
-			isa = PBXGroup;
-			children = (
-				B98D80BD1965BBF5007A8820 /* ModalyTests.m */,
-				B98D80B81965BBF5007A8820 /* Supporting Files */,
-			);
-			path = ModalyTests;
-			sourceTree = "<group>";
-		};
-		B98D80B81965BBF5007A8820 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B98D80B91965BBF5007A8820 /* ModalyTests-Info.plist */,
-				B98D80BA1965BBF5007A8820 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -190,24 +139,6 @@
 			productReference = B98D808C1965BBF5007A8820 /* Modaly.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B98D80AF1965BBF5007A8820 /* ModalyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B98D80C41965BBF5007A8820 /* Build configuration list for PBXNativeTarget "ModalyTests" */;
-			buildPhases = (
-				B98D80AC1965BBF5007A8820 /* Sources */,
-				B98D80AD1965BBF5007A8820 /* Frameworks */,
-				B98D80AE1965BBF5007A8820 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B98D80B61965BBF5007A8820 /* PBXTargetDependency */,
-			);
-			name = ModalyTests;
-			productName = ModalyTests;
-			productReference = B98D80B01965BBF5007A8820 /* ModalyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,11 +148,6 @@
 				CLASSPREFIX = JMG;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jorge Maroto García";
-				TargetAttributes = {
-					B98D80AF1965BBF5007A8820 = {
-						TestTargetID = B98D808B1965BBF5007A8820;
-					};
-				};
 			};
 			buildConfigurationList = B98D80871965BBF5007A8820 /* Build configuration list for PBXProject "Modaly Demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -237,7 +163,6 @@
 			projectRoot = "";
 			targets = (
 				B98D808B1965BBF5007A8820 /* Modaly */,
-				B98D80AF1965BBF5007A8820 /* ModalyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,14 +175,6 @@
 				B98D80A61965BBF5007A8820 /* Main_iPad.storyboard in Resources */,
 				B98D80AB1965BBF5007A8820 /* Images.xcassets in Resources */,
 				B98D809A1965BBF5007A8820 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B98D80AE1965BBF5007A8820 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B98D80BC1965BBF5007A8820 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,23 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B98D80AC1965BBF5007A8820 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B98D80BE1965BBF5007A8820 /* ModalyTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B98D80B61965BBF5007A8820 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B98D808B1965BBF5007A8820 /* Modaly */;
-			targetProxy = B98D80B51965BBF5007A8820 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B98D80981965BBF5007A8820 /* InfoPlist.strings */ = {
@@ -309,14 +210,6 @@
 				B98D80A51965BBF5007A8820 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		B98D80BA1965BBF5007A8820 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B98D80BB1965BBF5007A8820 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -422,46 +315,6 @@
 			};
 			name = Release;
 		};
-		B98D80C51965BBF5007A8820 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Modaly.app/Modaly";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ModalyTests/ModalyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B98D80C61965BBF5007A8820 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Modaly.app/Modaly";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Modaly/Modaly-Prefix.pch";
-				INFOPLIST_FILE = "ModalyTests/ModalyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,15 +332,6 @@
 			buildConfigurations = (
 				B98D80C21965BBF5007A8820 /* Debug */,
 				B98D80C31965BBF5007A8820 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B98D80C41965BBF5007A8820 /* Build configuration list for PBXNativeTarget "ModalyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B98D80C51965BBF5007A8820 /* Debug */,
-				B98D80C61965BBF5007A8820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
