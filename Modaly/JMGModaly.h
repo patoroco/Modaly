@@ -10,6 +10,4 @@
 
 @interface JMGModaly : UIStoryboardSegue
 
-    @property (nonatomic) BOOL modalPanelIsPresented;
-
 @end

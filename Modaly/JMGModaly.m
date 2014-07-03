@@ -13,6 +13,7 @@
     @property (nonatomic) CGRect originalSize;
     @property (nonatomic) CGAffineTransform afine;
     @property (nonatomic, strong) UIView *shadow;
+    @property (nonatomic) BOOL modalPanelIsPresented;
 
 @end
 
@@ -85,7 +86,7 @@
         [container addSubview:modalViewController.view];
         
         modalViewController.view.center = container.center;
-        modalViewController.view.frame = CGRectIntegral(modalViewController.view.frame);
+        modalViewController.view.frame = CGRectIntegral(modalViewController.view.frame); // This line fix blurry effect with partial pixels.
         modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 1;
