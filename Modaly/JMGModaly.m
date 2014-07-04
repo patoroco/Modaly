@@ -68,7 +68,7 @@
     
     vcd.view.frame = self.originalSize;
     
-    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
         // Invert bounds when iDevice is on portrait
         vcd.view.bounds = CGRectMake(0, 0, vcd.view.bounds.size.height, vcd.view.bounds.size.width);
     }
