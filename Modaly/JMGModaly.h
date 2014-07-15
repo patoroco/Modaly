@@ -30,4 +30,7 @@
 
 @interface JMGModaly : UIStoryboardSegue
 
+@property(nonatomic, copy) void (^presentBlock)();
+@property(nonatomic, copy) void (^dismissBlock)();
+
 @end

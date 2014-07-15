@@ -64,7 +64,7 @@
     vcd.transitioningDelegate = self;
     vcd.modalPresentationStyle = UIModalPresentationCustom;
     
-    [vcs presentViewController:vcd animated:YES completion:nil];
+    [vcs presentViewController:vcd animated:YES completion:self.presentBlock];
     
     vcd.view.frame = self.originalSize;
     
@@ -131,7 +131,7 @@
 }
 
 - (void)tap:(UITapGestureRecognizer *)gesture {
-    [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:nil];
+    [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 
