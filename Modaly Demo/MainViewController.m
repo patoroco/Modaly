@@ -21,6 +21,13 @@
     if ([segue isKindOfClass:[JMGModaly class]]) {
         // It needs to retain segue because it's animation transition delegate
         self.modalSegue = (JMGModaly *)segue;
+        [self.modalSegue setPresentBlock:^{
+            NSLog(@"I'm present!");
+        }];
+        
+        [self.modalSegue setDismissBlock:^{
+            NSLog(@"I'm out :'(");
+        }];
     }
 }
 
