@@ -24,7 +24,7 @@
  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  
-*/
+ */
 
 #import "JMGModaly.h"
 
@@ -39,27 +39,10 @@
 
 @implementation JMGModaly
 
-- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
-    self = [super initWithIdentifier:identifier source:source destination:destination];
-    
-    if (self == nil) {
-        return nil;
-    }
-    
-    self.originalSize = destination.view.frame;
-    
-    return self;
-}
-
 - (void)perform {
-    
     UIViewController *vcs = self.sourceViewController;
     UIViewController *vcd = self.destinationViewController;
-    
-    if ([vcd isKindOfClass:[UINavigationController class]]) {
-        UIViewController *rootViewController = [(UINavigationController *)vcd viewControllers][0];
-        self.originalSize = rootViewController.view.frame;
-    }
+    self.originalSize = [self topDestinationViewController].view.frame;
     
     vcd.transitioningDelegate = self;
     vcd.modalPresentationStyle = UIModalPresentationCustom;
@@ -131,8 +114,25 @@
 }
 
 - (void)tap:(UITapGestureRecognizer *)gesture {
-    [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+    [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:^{
+        [(UIViewController *)self.destinationViewController setTransitioningDelegate:nil];
+        
+        if (self.dismissBlock != nil) {
+            self.dismissBlock();
+        }
+    }];
 }
 
+#pragma mark - Convenience methods
+
+- (UIViewController *)topDestinationViewController {
+    UIViewController *vcd = self.destinationViewController;
+    
+    if ([vcd isKindOfClass:[UINavigationController class]]) {
+        vcd = [(UINavigationController *)vcd viewControllers][0];
+    }
+    
+    return vcd;
+}
 
 @end
