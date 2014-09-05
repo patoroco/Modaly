@@ -30,9 +30,9 @@
 
 @interface JMGModaly () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
-    @property (nonatomic) CGRect originalSize;
-    @property (nonatomic, strong) UIView *shadow;
-    @property (nonatomic) BOOL modalPanelIsPresented;
+@property (nonatomic) CGRect originalSize;
+@property (nonatomic, strong) UIView *shadow;
+@property (nonatomic) BOOL modalPanelIsPresented;
 
 @end
 
@@ -57,6 +57,10 @@
     }
 }
 
+
+#pragma mark - Animation
+
+#pragma mark UIViewControllerTransitioningDelegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     return self;
 }
@@ -65,6 +69,8 @@
     return self;
 }
 
+
+#pragma mark UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
     return 0.3;
@@ -79,6 +85,9 @@
     if (!self.modalPanelIsPresented) {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        
+        [presentingViewController viewWillDisappear:YES];
+        [modalViewController viewWillAppear:YES];
         
         self.shadow = [[UIView alloc] initWithFrame:container.bounds];
         self.shadow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
@@ -96,22 +105,32 @@
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, CGAffineTransformInvert(transform));
         } completion:^(BOOL finished) {
             self.modalPanelIsPresented = YES;
+            [presentingViewController viewDidDisappear:YES];
+            [modalViewController viewDidAppear:YES];
             [transitionContext completeTransition:YES];
         }];
     } else {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
         
+        [presentingViewController viewWillAppear:YES];
+        [modalViewController viewWillDisappear:YES];
+        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 0;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
         } completion:^(BOOL finished) {
             self.modalPanelIsPresented = NO;
+            [presentingViewController viewDidAppear:YES];
+            [modalViewController viewDidDisappear:YES];
             [transitionContext completeTransition:YES];
         }];
     }
     
 }
+
+
+#pragma mark - Gesture callbacks
 
 - (void)tap:(UITapGestureRecognizer *)gesture {
     [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:^{
@@ -122,6 +141,7 @@
         }
     }];
 }
+
 
 #pragma mark - Convenience methods
 
