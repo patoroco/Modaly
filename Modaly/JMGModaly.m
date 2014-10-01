@@ -30,7 +30,8 @@
 
 @interface JMGModaly () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
-@property (nonatomic) CGRect originalSize;
+@property (nonatomic) CGRect presentingViewControllerFrame;
+@property (nonatomic) CGRect presentedViewControllerFrame;
 @property (nonatomic, strong) UIView *shadow;
 @property (nonatomic) BOOL modalPanelIsPresented;
 
@@ -42,14 +43,16 @@
 - (void)perform {
     UIViewController *vcs = self.sourceViewController;
     UIViewController *vcd = self.destinationViewController;
-    self.originalSize = [self topDestinationViewController].view.frame;
+    
+    self.presentedViewControllerFrame = [self topDestinationViewController].view.frame;
+    self.presentingViewControllerFrame = vcs.view.frame;
     
     vcd.transitioningDelegate = self;
     vcd.modalPresentationStyle = UIModalPresentationCustom;
     
     [vcs presentViewController:vcd animated:YES completion:self.presentBlock];
     
-    vcd.view.frame = self.originalSize;
+    vcd.view.frame = self.presentedViewControllerFrame;
     
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
         // Invert bounds when iDevice is on portrait
@@ -112,6 +115,8 @@
     } else {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        
+        presentingViewController.view.frame = self.presentingViewControllerFrame;
         
         [presentingViewController viewWillAppear:YES];
         [modalViewController viewWillDisappear:YES];
