@@ -154,7 +154,7 @@
     UIViewController *vcd = self.destinationViewController;
     
     if ([vcd isKindOfClass:[UINavigationController class]]) {
-        vcd = [(UINavigationController *)vcd viewControllers][0];
+        vcd = [[(UINavigationController *)vcd viewControllers] firstObject];
     } else if ([vcd isKindOfClass:[UITabBarController class]]) {
         vcd = [(UITabBarController *)vcd selectedViewController];
     }
