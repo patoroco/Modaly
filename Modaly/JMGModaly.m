@@ -121,7 +121,9 @@
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
         
-        presentingViewController.view.frame = self.presentingViewControllerFrame;
+        if (self.respectPresentingViewControllerFrame) {
+            presentingViewController.view.frame = self.presentingViewControllerFrame;
+        }
         
         [presentingViewController viewWillAppear:YES];
         [modalViewController viewWillDisappear:YES];
