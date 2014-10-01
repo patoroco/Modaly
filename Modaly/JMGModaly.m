@@ -150,6 +150,8 @@
     
     if ([vcd isKindOfClass:[UINavigationController class]]) {
         vcd = [(UINavigationController *)vcd viewControllers][0];
+    } else if ([vcd isKindOfClass:[UITabBarController class]]) {
+        vcd = [(UITabBarController *)vcd selectedViewController];
     }
     
     return vcd;
