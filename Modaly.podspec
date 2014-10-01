@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Modaly"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "Segue to present a custom size view controller from storyboard"
   s.homepage     = "https://github.com/patoroco/Modaly"
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
