@@ -40,7 +40,8 @@
 
 @implementation JMGModaly
 
-- (void)perform {
+- (void)perform
+{
     UIViewController *vcs = self.sourceViewController;
     UIViewController *vcd = self.destinationViewController;
     
@@ -64,22 +65,26 @@
 #pragma mark - Animation
 
 #pragma mark UIViewControllerTransitioningDelegate
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
     return self;
 }
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
     return self;
 }
 
 
 #pragma mark UIViewControllerAnimatedTransitioning
 
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
+{
     return 0.3;
 }
 
-- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
+{
     UIViewController *presentingViewController = nil;
     UIViewController *modalViewController = nil;
     UIView *container = [transitionContext containerView];
@@ -137,7 +142,8 @@
 
 #pragma mark - Gesture callbacks
 
-- (void)tap:(UITapGestureRecognizer *)gesture {
+- (void)tap:(UITapGestureRecognizer *)gesture
+{
     [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:^{
         [(UIViewController *)self.destinationViewController setTransitioningDelegate:nil];
         
@@ -150,7 +156,8 @@
 
 #pragma mark - Convenience methods
 
-- (UIViewController *)topDestinationViewController {
+- (UIViewController *)topDestinationViewController
+{
     UIViewController *vcd = self.destinationViewController;
     
     if ([vcd isKindOfClass:[UINavigationController class]]) {
