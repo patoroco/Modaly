@@ -55,8 +55,10 @@
     
     vcd.view.frame = self.presentedViewControllerFrame;
     
-    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
-        // Invert bounds when iDevice is on portrait
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
+        [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO)
+    {
+        // Invert bounds when iDevice is on portrait before iOS8
         vcd.view.bounds = CGRectMake(0, 0, vcd.view.bounds.size.height, vcd.view.bounds.size.width);
     }
 }
@@ -88,7 +90,16 @@
     UIViewController *presentingViewController = nil;
     UIViewController *modalViewController = nil;
     UIView *container = [transitionContext containerView];
-    CGAffineTransform transform = CGAffineTransformMakeTranslation(container.bounds.size.width, 0);
+
+    CGAffineTransform transform;
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
+        [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO)
+    {
+        NSInteger sign = [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeLeft ? 1 : -1;
+        transform = CGAffineTransformMakeTranslation(sign * container.bounds.size.width, 0);
+    } else {
+        transform = CGAffineTransformMakeTranslation(0, container.bounds.size.height);
+    }
     
     if (!self.modalPanelIsPresented) {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
