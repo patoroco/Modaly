@@ -157,6 +157,9 @@
             [presentingViewController viewDidAppear:YES];
             [modalViewController viewDidDisappear:YES];
             [transitionContext completeTransition:YES];
+            if (self.dismissBlock != nil) {
+                self.dismissBlock();
+            }
         }];
     }
     
