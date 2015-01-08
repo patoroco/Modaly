@@ -26,9 +26,11 @@
  
  */
 
+#define JMGInvertSides(rect) CGRectMake(rect.origin.x, rect.origin.y, rect.size.height, rect.size.width)
+
 #import "JMGModaly.h"
 
-@interface JMGModaly () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+@interface JMGModaly ()
 
 @property (nonatomic) CGRect presentingViewControllerFrame;
 @property (nonatomic) CGRect presentedViewControllerFrame;
@@ -50,17 +52,9 @@
     
     vcd.transitioningDelegate = self;
     vcd.modalPresentationStyle = UIModalPresentationCustom;
-    
     [vcs presentViewController:vcd animated:YES completion:self.presentBlock];
     
     vcd.view.frame = self.presentedViewControllerFrame;
-    
-    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
-        [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO)
-    {
-        // Invert bounds when iDevice is on portrait before iOS8
-        vcd.view.bounds = CGRectMake(0, 0, vcd.view.bounds.size.height, vcd.view.bounds.size.width);
-    }
 }
 
 
@@ -85,12 +79,13 @@
     return 0.3;
 }
 
+
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *presentingViewController = nil;
     UIViewController *modalViewController = nil;
     UIView *container = [transitionContext containerView];
-
+    
     CGAffineTransform transform;
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
         [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO)
@@ -116,9 +111,22 @@
         [container addSubview:self.shadow];
         [container addSubview:modalViewController.view];
         
+        if (self.fullScreen == YES) {
+            modalViewController.view.bounds = container.bounds;
+        }
+        modalViewController.view.bounds = CGRectIntegral(modalViewController.view.bounds); // This line fix blurry effect with partial pixels.
+        
         modalViewController.view.center = container.center;
-        modalViewController.view.frame = CGRectIntegral(modalViewController.view.frame); // This line fix blurry effect with partial pixels.
+        
+        if ([[self class] needsRotateSides]) {
+            modalViewController.view.bounds = JMGInvertSides(modalViewController.view.bounds);
+        }
+        
         modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
+        
+        [presentingViewController viewWillDisappear:YES];
+        [modalViewController viewWillAppear:YES];
+        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 1;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, CGAffineTransformInvert(transform));
@@ -135,6 +143,8 @@
         if (self.respectPresentingViewControllerFrame) {
             presentingViewController.view.frame = self.presentingViewControllerFrame;
         }
+        
+        presentingViewController.view.center = container.center;
         
         [presentingViewController viewWillAppear:YES];
         [modalViewController viewWillDisappear:YES];
@@ -180,6 +190,16 @@
     }
     
     return vcd;
+}
+
+/**
+ Sides should be changed (width <-> height) before iOS8
+ @return YES if should change width by height
+ */
++ (BOOL)needsRotateSides
+{
+    return (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
+            [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO);
 }
 
 @end

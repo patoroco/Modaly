@@ -28,10 +28,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMGModaly : UIStoryboardSegue
+@interface JMGModaly : UIStoryboardSegue <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @property (atomic, assign) BOOL respectPresentingViewControllerFrame;
 @property (nonatomic, copy) void (^presentBlock)();
 @property (nonatomic, copy) void (^dismissBlock)();
+@property (atomic, assign) BOOL fullScreen;
 
 @end
