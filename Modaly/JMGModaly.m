@@ -100,9 +100,6 @@
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         
-        [presentingViewController viewWillDisappear:YES];
-        [modalViewController viewWillAppear:YES];
-        
         self.shadow = [[UIView alloc] initWithFrame:container.bounds];
         self.shadow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         self.shadow.alpha = 0;
@@ -124,16 +121,11 @@
         
         modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
         
-        [presentingViewController viewWillDisappear:YES];
-        [modalViewController viewWillAppear:YES];
-        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 1;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, CGAffineTransformInvert(transform));
         } completion:^(BOOL finished) {
             self.modalPanelIsPresented = YES;
-            [presentingViewController viewDidDisappear:YES];
-            [modalViewController viewDidAppear:YES];
             [transitionContext completeTransition:YES];
         }];
     } else {
@@ -146,16 +138,11 @@
         
         presentingViewController.view.center = container.center;
         
-        [presentingViewController viewWillAppear:YES];
-        [modalViewController viewWillDisappear:YES];
-        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 0;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
         } completion:^(BOOL finished) {
             self.modalPanelIsPresented = NO;
-            [presentingViewController viewDidAppear:YES];
-            [modalViewController viewDidDisappear:YES];
             [transitionContext completeTransition:YES];
             if (self.dismissBlock != nil) {
                 self.dismissBlock();
