@@ -136,8 +136,6 @@
             presentingViewController.view.frame = self.presentingViewControllerFrame;
         }
         
-        presentingViewController.view.center = container.center;
-        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 0;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
