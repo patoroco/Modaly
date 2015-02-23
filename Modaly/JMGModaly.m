@@ -1,7 +1,7 @@
 /*
- 
+
  Copyright (c) 2014 Jorge Maroto García ( http://maroto.me )
- 
+
  Permission is hereby granted, free of charge, to any
  person obtaining a copy of this software and associated
  documentation files (the "Software"), to deal in the
@@ -10,11 +10,11 @@
  distribute, sublicense, and/or sell copies of the
  Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
- 
+
  The above copyright notice and this permission notice
  shall be included in all copies or substantial portions of
  the Software.
- 
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
  KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
@@ -23,7 +23,7 @@
  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- 
+
  */
 
 #define JMGInvertSides(rect) CGRectMake(rect.origin.x, rect.origin.y, rect.size.height, rect.size.width)
@@ -46,14 +46,14 @@
 {
     UIViewController *vcs = self.sourceViewController;
     UIViewController *vcd = self.destinationViewController;
-    
+
     self.presentedViewControllerFrame = [self topDestinationViewController].view.frame;
     self.presentingViewControllerFrame = vcs.view.frame;
-    
+
     vcd.transitioningDelegate = self;
     vcd.modalPresentationStyle = UIModalPresentationCustom;
     [vcs presentViewController:vcd animated:YES completion:self.presentBlock];
-    
+
     vcd.view.frame = self.presentedViewControllerFrame;
 }
 
@@ -84,7 +84,7 @@
     UIViewController *presentingViewController = nil;
     UIViewController *modalViewController = nil;
     UIView *container = [transitionContext containerView];
-    
+
     CGAffineTransform transform;
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
         [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"fixedCoordinateSpace")] == NO)
@@ -94,11 +94,11 @@
     } else {
         transform = CGAffineTransformMakeTranslation(0, container.bounds.size.height);
     }
-    
+
     if (!self.modalPanelIsPresented) {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        
+
         self.shadow = [[UIView alloc] initWithFrame:container.bounds];
         self.shadow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         self.shadow.alpha = 0;
@@ -106,23 +106,23 @@
         if (self.allowTapInShadowViewWithoutDismiss == NO) {
             [self.shadow addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
         }
-        
+
         [container addSubview:self.shadow];
         [container addSubview:modalViewController.view];
-        
+
         if (self.fullScreen == YES) {
             modalViewController.view.bounds = container.bounds;
         }
         modalViewController.view.bounds = CGRectIntegral(modalViewController.view.bounds); // This line fix blurry effect with partial pixels.
-        
+
         modalViewController.view.center = container.center;
-        
+
         if ([[self class] needsRotateSides]) {
             modalViewController.view.bounds = JMGInvertSides(modalViewController.view.bounds);
         }
-        
+
         modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
-        
+
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 1;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, CGAffineTransformInvert(transform));
@@ -133,11 +133,11 @@
     } else {
         presentingViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
         modalViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        
+
         if (self.respectPresentingViewControllerFrame) {
             presentingViewController.view.frame = self.presentingViewControllerFrame;
         }
-        
+
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             self.shadow.alpha = 0;
             modalViewController.view.transform = CGAffineTransformConcat(modalViewController.view.transform, transform);
@@ -149,7 +149,7 @@
             }
         }];
     }
-    
+
 }
 
 
@@ -159,7 +159,7 @@
 {
     [(UIViewController *)self.destinationViewController dismissViewControllerAnimated:YES completion:^{
         [(UIViewController *)self.destinationViewController setTransitioningDelegate:nil];
-        
+
         if (self.dismissBlock != nil) {
             self.dismissBlock();
         }
@@ -172,13 +172,13 @@
 - (UIViewController *)topDestinationViewController
 {
     UIViewController *vcd = self.destinationViewController;
-    
+
     if ([vcd isKindOfClass:[UINavigationController class]]) {
         vcd = [[(UINavigationController *)vcd viewControllers] firstObject];
     } else if ([vcd isKindOfClass:[UITabBarController class]]) {
         vcd = [(UITabBarController *)vcd selectedViewController];
     }
-    
+
     return vcd;
 }
 
