@@ -34,5 +34,5 @@
 @property (nonatomic, copy) void (^presentBlock)();
 @property (nonatomic, copy) void (^dismissBlock)();
 @property (atomic, assign) BOOL fullScreen;
-
+@property (atomic, assign) BOOL allowTapInShadowViewWithoutDismiss;
 @end

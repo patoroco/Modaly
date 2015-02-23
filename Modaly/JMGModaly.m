@@ -57,7 +57,6 @@
     vcd.view.frame = self.presentedViewControllerFrame;
 }
 
-
 #pragma mark - Animation
 
 #pragma mark UIViewControllerTransitioningDelegate
@@ -103,7 +102,10 @@
         self.shadow = [[UIView alloc] initWithFrame:container.bounds];
         self.shadow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         self.shadow.alpha = 0;
-        [self.shadow addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
+
+        if (self.allowTapInShadowViewWithoutDismiss == NO) {
+            [self.shadow addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
+        }
         
         [container addSubview:self.shadow];
         [container addSubview:modalViewController.view];
