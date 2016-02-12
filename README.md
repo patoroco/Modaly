@@ -4,7 +4,7 @@ Display modal view controllers is easy if you want to follow Apple guidelines an
 
 ## Install
 
-`Modaly` is available via Cocoa Pods, so you only need to include this line in your Podfile
+`Modaly` is available via CocoaPods, so you only need to include this line in your Podfile
 
 ```
 pod 'Modaly'
