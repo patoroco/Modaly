@@ -20,7 +20,7 @@ After that, you need to select `freeform`in view controller metrics menu (image 
 
 ![Metrics](Screenshots/metrics.png)
 
-`Modaly` supports common UIViewControllers and UINavigationControllers, and the best way to discover it is download and open `Demo` XCode project:
+`Modaly` supports common UIViewControllers and UINavigationControllers, and the best way to discover it is download and open `Demo` Xcode project:
 
 ![Storyboard](Screenshots/storyboard.png)
 
